@@ -7,19 +7,19 @@ namespace Tyuiu.BabenkoIV.Sprint2.Task3.V5.Lib
         {
             if (x > 1)
             {
-                return x - Math.Pow(((x + 1) / (x - 1)), x);
+                return Math.Round(x - Math.Pow((x + 1) / (x - 1), x), 3);
             }
-            else if (x ==0 ) 
+            else if (x == 0)
             {
-                return (Math.Pow(x, 2) - Math.Cos(Math.Pow(x, 2))) / (Math.Pow(x, 2) - Math.Sin(Math.Pow(x, 2)) + 12); ;
+                return Math.Round((Math.Pow(x, 2) - Math.Cos(Math.Pow(x, 2))) / (Math.Pow(x, 2) - Math.Sin(Math.Pow(x, 2)) + 12), 3);
             }
             else if (x > -9 && x < 0)
             {
-                return Math.Pow(6 + 4 / Math.Pow(x, 2), x);
+                return Math.Round(Math.Pow(6 + 4 / Math.Pow(x, 2), x), 3);
             }
             else
             {
-                return Math.Pow(x, 3) + 10 * x - (Math.Pow(x, 2) / Math.Pow(x, 4));
+                return Math.Round(Math.Pow(x, 3) + 10 * x - (Math.Pow(x, 2) / Math.Pow(x, 4)), 3);
             }
         }
     }
